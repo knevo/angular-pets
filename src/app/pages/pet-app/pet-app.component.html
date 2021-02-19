@@ -1,9 +1,0 @@
-<div class="pet-app">
-    <h2>Pet App</h2>
-    <pet-filter (onFilter)="onFilterHandler($event)">
-        <h2>The filter!</h2>
-    </pet-filter>
-    <pet-list [pets]="pets"></pet-list>
-    <button (click)="onAddPet()">Add Pet</button>
-    <router-outlet></router-outlet>
-</div>
