@@ -1,0 +1,6 @@
+<div>
+    <ng-content></ng-content>
+    <input inputColor="lightsalmon" type="text" [(ngModel)]="filterBy.name">
+    <button #button (click)="onFilter.emit(filterBy)">Filter</button>
+    <!-- {{this.props.children}} -->
+</div>

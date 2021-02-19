@@ -1,0 +1,3 @@
+<div class="pet-list">
+    <pet-preview *ngFor="let pet of pets" [pet]="pet" (onSelectPet)="onSelectPet.emit($event)"></pet-preview>
+</div>

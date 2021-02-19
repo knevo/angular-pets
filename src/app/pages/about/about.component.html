@@ -1,0 +1,24 @@
+<div>
+    <!-- <h2>My birthday</h2>
+    {{birthday|date:'shortDate'}}
+    <br>
+    {{birthday|date|uppercase}}
+    <br>
+    {{birthday|dateDesc}}
+    <br>
+    <br>-->
+
+    {{pets|filterArr:'name':'Popo'|json}}
+
+    <br>
+    <!-- {{url|fetchJson|json}} -->
+    <label for="">
+        Filter Name
+        <input type="text" [(ngModel)]="filterBy.name">
+    </label>
+    <br>
+    <br>
+    <pet-list [pets]="pets"></pet-list>
+    <button (click)="changePet()">change name</button>
+
+</div>
