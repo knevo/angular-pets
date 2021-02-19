@@ -17,6 +17,9 @@ import { FilterArrPipe } from './pipes/filter-arr.pipe';
 import { FetchJsonPipe } from './pipes/fetch-json.pipe';
 import { InputColorDirective } from './directives/input-color.directive';
 
+import mockServer from './app.mock';
+
+mockServer();
 @NgModule({
   declarations: [
     AppComponent,

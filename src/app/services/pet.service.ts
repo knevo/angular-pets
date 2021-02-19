@@ -11,7 +11,7 @@ import { retry, catchError, map } from 'rxjs/operators';
 export class PetService {
   constructor(private http: HttpClient) { }
 
-  private BASE_URL = 'http://localhost:3000/pet'
+  private BASE_URL = '/api/pet'
 
   private _pets$ = new BehaviorSubject<Pet[]>([]);
   public pets$ = this._pets$.asObservable()
@@ -20,12 +20,13 @@ export class PetService {
     this.http.get<Pet[]>(this.BASE_URL)
       .pipe(
         map(pets => {
+          console.log(pets);
+
           return pets.filter(({ name }) => {
             return name.toLowerCase().includes(filterBy.name.toLowerCase());
           })
         })
       ).subscribe(pets => {
-        console.log('load pets', pets);
         this._pets$.next(pets);
       })
   }
